@@ -26,6 +26,7 @@ export const Experience = () => {
               achievements={item.achievements}
               technologies={item.technologies}
               location={item.location}
+              duration={item.duration}
             />
           ))}
         </div>

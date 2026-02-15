@@ -16,6 +16,7 @@ const MilestoneCard = ({
   description,
   achievements,
   location,
+  duration
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -61,9 +62,14 @@ const MilestoneCard = ({
               </div>
             </div>
             {subtitle && (
-              <div className="text-sm mt-1 truncate">
+              <div className="text-sm mt-1 truncate flex justify-between">
+                <div>
                 <span className="font-semibold text-gray-900">{subtitle}</span>
                 {location && <span className="text-gray-600"> • {location}</span>}
+                </div>
+                <div className="text-sm text-gray-600 text-right whitespace-nowrap">
+                {duration}
+                </div>
               </div>
             )}
           </div>
