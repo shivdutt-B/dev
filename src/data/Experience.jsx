@@ -23,7 +23,7 @@ const EXPERIENCE = [
   },
   {
     company: "Deeplure",
-    href: "https://deeplure.com",
+    href: "https://deeplure.org",
     location: "Remote",
     title: "System Architect",
     logoUrl: Deeplure,
@@ -41,7 +41,7 @@ const EXPERIENCE = [
   },
   {
     company: "Autonoms",
-    href: "https://autonoms.com",
+    href: "",
     location: "Remote",
     title: "Co-Founder & Full Stack Engineer",
     logoUrl: Autonoms,

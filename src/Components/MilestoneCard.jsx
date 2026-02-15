@@ -16,7 +16,8 @@ const MilestoneCard = ({
   description,
   achievements,
   location,
-  duration
+  duration,
+  href
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -28,7 +29,7 @@ const MilestoneCard = ({
   };
 
   return (
-    <Card 
+    <Card
       className="py-2 cursor-pointer"
       onClick={handleClick}
     >
@@ -64,11 +65,23 @@ const MilestoneCard = ({
             {subtitle && (
               <div className="text-sm mt-1 truncate flex justify-between">
                 <div>
-                <span className="font-semibold text-gray-900">{subtitle}</span>
-                {location && <span className="text-gray-600"> • {location}</span>}
+                  {href ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-gray-900 hover:text-blue-600 hover:underline transition-colors cursor-pointer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {subtitle}
+                    </a>
+                  ) : (
+                    <span className="font-semibold text-gray-900">{subtitle}</span>
+                  )}
+                  {location && <span className="text-gray-600"> • {location}</span>}
                 </div>
                 <div className="text-sm text-gray-600 text-right whitespace-nowrap">
-                {duration}
+                  {duration}
                 </div>
               </div>
             )}
@@ -92,14 +105,14 @@ const MilestoneCard = ({
             <div className="ml-16 space-y-4">
               {/* Description */}
               <div className="text-sm leading-relaxed text-black">
-                <span dangerouslySetInnerHTML={{ 
+                <span dangerouslySetInnerHTML={{
                   __html: description.replace(
                     /(\d+\s*(?:clients?|websites?|projects?)|React\/Next\.js|Node\.js|SEO optimization|full-stack development|web solutions)/gi,
                     '<span class="font-semibold text-blue-600">$1</span>'
                   )
                 }} />
               </div>
-              
+
               {/* Achievements */}
               {achievements && achievements.length > 0 && (
                 <div>
@@ -116,8 +129,8 @@ const MilestoneCard = ({
                       return (
                         <li key={index} className="text-sm leading-relaxed text-black">
                           <span className="text-green-500 text-xl mr-2 mt-1 font-bold">•</span>
-                          <span dangerouslySetInnerHTML={{ 
-                            __html: highlightImportantFacts(achievement) 
+                          <span dangerouslySetInnerHTML={{
+                            __html: highlightImportantFacts(achievement)
                           }} />
                         </li>
                       );
