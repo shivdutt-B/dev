@@ -10,6 +10,7 @@ function Skills() {
     "html",
     "css",
     "js",
+    "nextjs",
     "react",
     "nodejs",
     "express",

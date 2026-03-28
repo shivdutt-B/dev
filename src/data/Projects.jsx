@@ -39,25 +39,16 @@ export const PROJECTS = [
       arch,
     ],
     image: ss1,
-    description: "Gorr is a sophisticated microservices-based deployment platform designed to streamline project deployments with real-time monitoring, efficient resource management, and seamless integration with cloud services. ",
+    description: "GORR is a microservices-based deployment platform that lets you deploy and monitor applications in real time. It provides live logs, scalable deployments, and efficient resource management using cloud services like AWS. Architected with microservices handling APIs, builds, monitoring & dynamic routing. Leveraged AWS ECS & S3 for containerized builds and parallel deployments. Built real-time monitoring using Socket.IO and Redis, with reverse proxy–based dynamic routing for custom domains.",
     technologies: [
-      // General technologies
-      "html",
-      "css",
-      "ts",
+      "react",
       "nodejs",
       "express",
-      "react",
-      "tailwindcss",
-      // State management and database
-      "recoil",
       "postgresql",
       "prisma",
-      "redis",
-      // Deployment and cloud
       "aws",
       "docker",
-      // Additional services
+      "redis",
       "socketio",
     ],
     codeUrl: "https://github.com/shivdutt-B/gorr",
@@ -93,26 +84,16 @@ export const PROJECTS = [
       heimdallArch,
     ],
     image: "https://shivdutt.dev/assets/ss1-Wuk7AJcq.png", 
-    description: "Heimdall is a comprehensive ping and uptime monitoring platform designed to eliminate cold starts on free hosting platforms like Render, Railway, Fly.io. By intelligently pinging your backend servers at customizable intervals, Also providing detailed analytics and instant alerts.",
+    description: "Heimdall is a monitoring platform that keeps backend servers active & tracks their performance by automatically sending pings at regular intervals, preventing 30–50s cold starts on platforms like Render, Railway, & Fly.io. Developed 6 microservices for APIs, uptime monitoring, job processing, load balancing, and alerting. Implemented auto-scaling background job processing using BullMQ & Redis, with real-time alerts on failures and a monitoring dashboard displaying uptime, latency, and system metrics.",
     technologies: [
-      // General technologies
-      "html",
-      "css",
-      "ts",
+      "react",
       "nodejs",
       "express",
-      "react",
-      "tailwindcss",
-      // State management and database
-      "recoil",
       "postgresql",
       "prisma",
-      "redis",
-      // Deployment and cloud
-      "docker",
       "aws",
-      // Additional services
-      "gmail",
+      "docker",
+      "redis",
     ],
     codeUrl: "https://github.com/shivdutt-B/heimdall",
     liveUrl: "https://heimdall-pings.vercel.app/",
