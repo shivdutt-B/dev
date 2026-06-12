@@ -1,5 +1,5 @@
 import { Icons } from "../Components/ui/icon";
-import { HomeIcon, Linkedin, Code, Instagram } from "lucide-react"; // Adjust if needed for icon types in your setup
+import { HomeIcon, Linkedin, Code, Instagram } from "lucide-react"; 
 
 export const Navbar = [{ href: "/", icon: HomeIcon, label: "Home" }];
 
@@ -22,7 +22,7 @@ export const Contact = {
     Codolio: {
       name: "Codolio",
       url: "https://codolio.com/profile/CatFish",
-      icon: Code, // adjust to an appropriate icon if available
+      icon: Code, 
       navbar: true,
     },
     Twitter: {

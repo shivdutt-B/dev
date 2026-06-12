@@ -106,10 +106,7 @@ const MilestoneCard = ({
               {/* Description */}
               <div className="text-sm leading-relaxed text-black">
                 <span dangerouslySetInnerHTML={{
-                  __html: description.replace(
-                    /(\d+\s*(?:clients?|websites?|projects?)|React\/Next\.js|Node\.js|SEO optimization|full-stack development|web solutions)/gi,
-                    '<span class="font-semibold text-blue-600">$1</span>'
-                  )
+                  __html: description
                 }} />
               </div>
 
@@ -118,23 +115,14 @@ const MilestoneCard = ({
                 <div>
                   <h4 className="text-sm font-semibold text-gray-900">Key Achievements</h4>
                   <ul className="space-y-[-2px]">
-                    {achievements.map((achievement, index) => {
-                      const highlightImportantFacts = (text) => {
-                        return text.replace(
-                          /(₹\d+[k|K]?\s*(?:revenue|clients?|projects?|%|days?|time)|\d+%|\$\d+[k|K]?|\d+\+?\s*(?:clients?|projects?|websites?))/g,
-                          '<span class="font-bold text-blue-600">$1</span>'
-                        );
-                      };
-
-                      return (
-                        <li key={index} className="text-sm leading-relaxed text-black">
-                          <span className="text-green-500 text-xl mr-2 mt-1 font-bold">•</span>
-                          <span dangerouslySetInnerHTML={{
-                            __html: highlightImportantFacts(achievement)
-                          }} />
-                        </li>
-                      );
-                    })}
+                    {achievements.map((achievement, index) => (
+                      <li key={index} className="text-sm leading-relaxed text-black">
+                        <span className="text-green-500 text-xl mr-2 mt-1 font-bold">•</span>
+                        <span dangerouslySetInnerHTML={{
+                          __html: achievement
+                        }} />
+                      </li>
+                    ))}
                   </ul>
                 </div>
               )}
